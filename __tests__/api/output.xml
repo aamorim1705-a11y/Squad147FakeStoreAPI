@@ -1,143 +1,148 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-10-22T14:25:40.840576" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-10-22T14:34:27.933683" rpa="false" schemaversion="5">
 <suite id="s1" name="Test Fakestore" source="D:\Andrea\iCloudDrive\Documents\Andrea\Formação em Teste de Software\Iterasys\Squad147FakeStoreAPI\__tests__\api\test_fakestore.robot">
 <kw name="Post Login" owner="common" type="SETUP">
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2026-10-22T14:25:41.605869" level="INFO">${body} = {'username': 'mor_2314', 'password': '83r5^_'}</msg>
+<msg time="2026-10-22T14:34:28.670706" level="INFO">${body} = {'username': 'mor_2314', 'password': '83r5^_'}</msg>
 <var>${body}</var>
 <arg>username=mor_2314</arg>
 <arg>password=83r5^_</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2026-10-22T14:25:41.604983" elapsed="0.000959"/>
+<status status="PASS" start="2026-10-22T14:34:28.669855" elapsed="0.000919"/>
 </kw>
 <kw name="POST" owner="RequestsLibrary">
-<msg time="2026-10-22T14:25:42.867271" level="INFO">POST Request : url=https://fakestoreapi.com/auth/login 
+<msg time="2026-10-22T14:34:29.985862" level="INFO">POST Request : url=https://fakestoreapi.com/auth/login 
  path_url=/auth/login 
  headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '46', 'Content-Type': 'application/json'} 
  body=b'{"username": "mor_2314", "password": "83r5^_"}' 
  </msg>
-<msg time="2026-10-22T14:25:42.867481" level="INFO">POST Response : url=https://fakestoreapi.com/auth/login 
+<msg time="2026-10-22T14:34:29.986085" level="INFO">POST Response : url=https://fakestoreapi.com/auth/login 
  status=201, reason=Created 
- headers={'Date': 'Thu, 22 Oct 2026 13:25:33 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '152', 'Connection': 'keep-alive', 'access-control-allow-origin': '*', 'etag': 'W/"98-c31GcDp9rE5YgfrucMnu4Rsx4h8"', 'x-powered-by': 'Express', 'cf-cache-status': 'DYNAMIC', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=SkjhAbemJ%2B4rkMRAribBeOCuDz2GWx%2FHy15js0VYhbQzXCJafJrxwDehI6xA8JLfi96e4LSXOSI9jJBfPW4xh1KUSzc2BX1l3Fb9FkS7G%2BrBdRMLpAguMmaU4SghL6nhOO7w5yOhR49%2B9UfuEWaH"}]}', 'Server': 'cloudflare', 'CF-RAY': 'a4e8d4200b8070cd-MAD'} 
- body={"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsInVzZXIiOiJtb3JfMjMxNCIsImlhdCI6MTc5MjY3NTUzM30.6oSTCjM8dM8gu_Eovd3awqqsrdfUNe4rTlZs2elso04"} 
+ headers={'Date': 'Thu, 22 Oct 2026 13:34:20 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '152', 'Connection': 'keep-alive', 'access-control-allow-origin': '*', 'etag': 'W/"98-A5yGtkU1Q3gJv9ai332h9b/KzK4"', 'x-powered-by': 'Express', 'cf-cache-status': 'DYNAMIC', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=lWSWRMHNybrztnNdC%2BR7YORy2IzqTlI7sIJTKbIv6MSbJQx7joLZIJWiwUDT2%2Bo%2FzzOfm9hghX6Bsj7LvN%2B0GrvNbq9c5HwN7qjhCnKQxSAKpnr%2BBPnyTa9TOhA%2FQOJgLBHWu5OpJbo%2B5%2BKOZl0I"}]}', 'Server': 'cloudflare', 'CF-RAY': 'a4e8e0feeddfeb1d-MAN'} 
+ body={"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsInVzZXIiOiJtb3JfMjMxNCIsImlhdCI6MTc5MjY3NjA2MH0.yGe8ewmxkNkLRBxD43BjtFn3ZZiPFcQSGr5dUyYvkvA"} 
  </msg>
-<msg time="2026-10-22T14:25:42.867708" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<msg time="2026-10-22T14:34:29.986320" level="INFO">${response} = &lt;Response [201]&gt;</msg>
 <var>${response}</var>
 <arg>url=${url}/auth/login</arg>
 <arg>json=${body}</arg>
 <doc>Sends a POST request.</doc>
-<status status="PASS" start="2026-10-22T14:25:41.606901" elapsed="1.260858"/>
+<status status="PASS" start="2026-10-22T14:34:28.671000" elapsed="1.315376"/>
 </kw>
 <kw name="Status Should Be" owner="RequestsLibrary">
 <arg>201</arg>
 <doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" start="2026-10-22T14:25:42.867987" elapsed="0.000210"/>
+<status status="PASS" start="2026-10-22T14:34:29.986649" elapsed="0.000245"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-10-22T14:25:42.869422" level="INFO">${token} = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsInVzZXIiOiJtb3JfMjMxNCIsImlhdCI6MTc5MjY3NTUzM30.6oSTCjM8dM8gu_Eovd3awqqsrdfUNe4rTlZs2elso04</msg>
+<msg time="2026-10-22T14:34:29.988305" level="INFO">${token} = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsInVzZXIiOiJtb3JfMjMxNCIsImlhdCI6MTc5MjY3NjA2MH0.yGe8ewmxkNkLRBxD43BjtFn3ZZiPFcQSGr5dUyYvkvA</msg>
 <var>${token}</var>
 <arg>${response.json()}[token]</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-10-22T14:25:42.868349" elapsed="0.001124"/>
+<status status="PASS" start="2026-10-22T14:34:29.987072" elapsed="0.001298"/>
 </kw>
 <kw name="Set Suite Variable" owner="BuiltIn">
-<msg time="2026-10-22T14:25:42.870136" level="INFO">${token} = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsInVzZXIiOiJtb3JfMjMxNCIsImlhdCI6MTc5MjY3NTUzM30.6oSTCjM8dM8gu_Eovd3awqqsrdfUNe4rTlZs2elso04</msg>
+<msg time="2026-10-22T14:34:29.989216" level="INFO">${token} = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsInVzZXIiOiJtb3JfMjMxNCIsImlhdCI6MTc5MjY3NjA2MH0.yGe8ewmxkNkLRBxD43BjtFn3ZZiPFcQSGr5dUyYvkvA</msg>
 <arg>${token}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<status status="PASS" start="2026-10-22T14:25:42.869650" elapsed="0.000560"/>
+<status status="PASS" start="2026-10-22T14:34:29.988624" elapsed="0.000685"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Login realizado com sucesso</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-10-22T14:25:42.870366" elapsed="0.000627"/>
+<status status="PASS" start="2026-10-22T14:34:29.989489" elapsed="0.000668"/>
 </kw>
 <arg>${url}</arg>
-<status status="PASS" start="2026-10-22T14:25:41.604052" elapsed="1.267209"/>
+<status status="PASS" start="2026-10-22T14:34:28.668762" elapsed="1.321624"/>
 </kw>
-<test id="s1-t1" name="Post Products" line="9">
+<test id="s1-t1" name="Post Products" line="10">
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2026-10-22T14:25:42.873088" level="INFO">${headers} = {'Content-Type': 'application/json'}</msg>
+<msg time="2026-10-22T14:34:29.992281" level="INFO">${headers} = {'Content-Type': 'application/json'}</msg>
 <var>${headers}</var>
 <arg>Content-Type=${content_type}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2026-10-22T14:25:42.872204" elapsed="0.000943"/>
+<status status="PASS" start="2026-10-22T14:34:29.991532" elapsed="0.000814"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2026-10-22T14:25:42.878473" level="INFO">${body} = {'id': 21, 'title': 'Arroz Agulhinha', 'price': 3.5, 'description': 'classe longo fino', 'category': 'Mercearia', 'image': ''}</msg>
+<msg time="2026-10-22T14:34:29.994338" level="INFO">${body} = {'title': 'Arroz Agulhinha', 'price': 3.5, 'description': 'classe longo fino', 'category': 'Mercearia', 'image': ''}</msg>
 <var>${body}</var>
 <arg>json.loads(open('../../fixtures/json/products1.json').read())</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2026-10-22T14:25:42.873689" elapsed="0.004856"/>
+<status status="PASS" start="2026-10-22T14:34:29.992928" elapsed="0.001482"/>
 </kw>
 <kw name="POST" owner="RequestsLibrary">
-<msg time="2026-10-22T14:25:43.712515" level="INFO">POST Request : url=https://fakestoreapi.com/products 
+<msg time="2026-10-22T14:34:30.940520" level="INFO">POST Request : url=https://fakestoreapi.com/products 
  path_url=/products 
- headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '126'} 
- body=b'{"id": 21, "title": "Arroz Agulhinha", "price": 3.5, "description": "classe longo fino", "category": "Mercearia", "image": ""}' 
+ headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '116'} 
+ body=b'{"title": "Arroz Agulhinha", "price": 3.5, "description": "classe longo fino", "category": "Mercearia", "image": ""}' 
  </msg>
-<msg time="2026-10-22T14:25:43.712758" level="INFO">POST Response : url=https://fakestoreapi.com/products 
+<msg time="2026-10-22T14:34:30.940669" level="INFO">POST Response : url=https://fakestoreapi.com/products 
  status=201, reason=Created 
- headers={'Date': 'Thu, 22 Oct 2026 13:25:33 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '115', 'Connection': 'keep-alive', 'access-control-allow-origin': '*', 'etag': 'W/"73-i8Ql35XjrExNn1mI3AGdTtz3A20"', 'x-powered-by': 'Express', 'cf-cache-status': 'DYNAMIC', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=EHD0oD5c8GyuXhC89GsynMgjrnZ7jNt%2FC%2F78CdsCh6Kx6Al6OnCR847wyuLvfKgmgmX3NSJqbvPbUHhCpsKBmU2ch3uX2hGKBDe7rFn68924wr1Bpe0KbLn57q2a1DzToo9Lmu06H%2Bf9lmOvP7M3"}]}', 'Server': 'cloudflare', 'CF-RAY': 'a4e8d426afda1a82-MAD'} 
+ headers={'Date': 'Thu, 22 Oct 2026 13:34:21 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '115', 'Connection': 'keep-alive', 'access-control-allow-origin': '*', 'etag': 'W/"73-i8Ql35XjrExNn1mI3AGdTtz3A20"', 'x-powered-by': 'Express', 'cf-cache-status': 'DYNAMIC', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=A5o0BXUKxDw5TO4PzN87wPw363fyUq86241r%2F%2B7Tx7fRoO21jbDl4K2tWTGMgbkhnK7hsVtT2zNe0K%2BSVjV5EgIjRoYDTWSViFQgVIhApR5IRjgt0nKibgfa45doSf7dBmv08ng%2FY1adnIAKAg3d"}]}', 'Server': 'cloudflare', 'CF-RAY': 'a4e8e105ebc80746-MAN'} 
  body={"id":21,"title":"Arroz Agulhinha","price":3.5,"description":"classe longo fino","image":"","category":"Mercearia"} 
  </msg>
-<msg time="2026-10-22T14:25:43.713113" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<msg time="2026-10-22T14:34:30.940884" level="INFO">${response} = &lt;Response [201]&gt;</msg>
 <var>${response}</var>
 <arg>url=${url}/products</arg>
 <arg>json=${body}</arg>
 <arg>headers=${headers}</arg>
 <doc>Sends a POST request.</doc>
-<status status="PASS" start="2026-10-22T14:25:42.879102" elapsed="0.834105"/>
+<status status="PASS" start="2026-10-22T14:34:29.994955" elapsed="0.945983"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-10-22T14:25:43.716071" level="INFO">${response_body} = {'id': 21, 'title': 'Arroz Agulhinha', 'price': 3.5, 'description': 'classe longo fino', 'image': '', 'category': 'Mercearia'}</msg>
+<msg time="2026-10-22T14:34:30.942804" level="INFO">${response_body} = {'id': 21, 'title': 'Arroz Agulhinha', 'price': 3.5, 'description': 'classe longo fino', 'image': '', 'category': 'Mercearia'}</msg>
 <var>${response_body}</var>
 <arg>${response.json()}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-10-22T14:25:43.713857" elapsed="0.002330"/>
+<status status="PASS" start="2026-10-22T14:34:30.941547" elapsed="0.001322"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>${response_body}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-10-22T14:25:43.716747" elapsed="0.001108"/>
+<status status="PASS" start="2026-10-22T14:34:30.943366" elapsed="0.000716"/>
 </kw>
 <kw name="Status Should Be" owner="RequestsLibrary">
 <arg>201</arg>
 <doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" start="2026-10-22T14:25:43.718405" elapsed="0.000289"/>
+<status status="PASS" start="2026-10-22T14:34:30.944530" elapsed="0.000219"/>
 </kw>
-<kw name="Should Be Equal" owner="BuiltIn">
-<arg>${response_body}[id]</arg>
-<arg>${id}</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-10-22T14:25:43.719218" elapsed="0.001230"/>
+<kw name="Dictionary Should Contain Key" owner="Collections">
+<arg>${response_body}</arg>
+<arg>id</arg>
+<doc>Fails if ``key`` is not found from ``dictionary``.</doc>
+<status status="PASS" start="2026-10-22T14:34:30.945176" elapsed="0.000345"/>
+</kw>
+<kw name="Should Be True" owner="BuiltIn">
+<arg>${response_body}[id] &gt; 0</arg>
+<doc>Fails if the given condition is not true.</doc>
+<status status="PASS" start="2026-10-22T14:34:30.945982" elapsed="0.001180"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${response_body}[title]</arg>
 <arg>${title}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-10-22T14:25:43.721040" elapsed="0.001336"/>
+<status status="PASS" start="2026-10-22T14:34:30.947853" elapsed="0.001259"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${response_body}[price]</arg>
 <arg>${price}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-10-22T14:25:43.722948" elapsed="0.001206"/>
+<status status="PASS" start="2026-10-22T14:34:30.950052" elapsed="0.001118"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${response_body}[description]</arg>
 <arg>${description}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-10-22T14:25:43.726038" elapsed="0.001316"/>
+<status status="PASS" start="2026-10-22T14:34:30.951779" elapsed="0.001119"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${response_body}[category]</arg>
 <arg>${category}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-10-22T14:25:43.727926" elapsed="0.001035"/>
+<status status="PASS" start="2026-10-22T14:34:30.953466" elapsed="0.001172"/>
 </kw>
-<status status="PASS" start="2026-10-22T14:25:42.871400" elapsed="0.858154"/>
+<status status="PASS" start="2026-10-22T14:34:29.990577" elapsed="0.964678"/>
 </test>
-<status status="PASS" start="2026-10-22T14:25:40.847813" elapsed="2.883691"/>
+<status status="PASS" start="2026-10-22T14:34:27.938572" elapsed="3.019024"/>
 </suite>
 <statistics>
 <total>
