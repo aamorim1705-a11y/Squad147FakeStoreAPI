@@ -17,7 +17,7 @@ Post Products
     Log To Console    ${response_body}
 
     # 1. Validar o status HTTP
-    Status Should Be    201
+    Status Should Be    201    ${response}
 
     # 2. Validar a existência do ID
     Dictionary Should Contain Key    ${response_body}    id
