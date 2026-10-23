@@ -42,7 +42,6 @@ Get Sigle User
     Should Be Equal    ${response_body}[email]         ${get_email}
     
 Update User
-    ${headers}    Create Dictionary    Content-Type=${content_type}
     ${body}    Create Dictionary    id=${update_user_id}    username=${update_username}    email=${update_email}    password=${update_password}
 
     ${response}    PUT    url=${url}/users/${update_user_id}    json=${body}    

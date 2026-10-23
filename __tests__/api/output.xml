@@ -1,236 +1,229 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-10-23T11:05:59.322083" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-10-23T11:29:44.615997" rpa="false" schemaversion="5">
 <suite id="s1" name="Test Users" source="D:\Andrea\iCloudDrive\Documents\Andrea\Formação em Teste de Software\Iterasys\Squad147FakeStoreAPI\__tests__\api\test_users.robot">
 <test id="s1-t1" name="Post User" line="8">
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2026-10-23T11:06:00.507028" level="INFO">${headers} = {'Content-Type': 'application/json'}</msg>
+<msg time="2026-10-23T11:29:45.272868" level="INFO">${headers} = {'Content-Type': 'application/json'}</msg>
 <var>${headers}</var>
 <arg>Content-Type=${content_type}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2026-10-23T11:06:00.504830" elapsed="0.002333"/>
+<status status="PASS" start="2026-10-23T11:29:45.270097" elapsed="0.002841"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2026-10-23T11:06:00.517698" level="INFO">${body} = {'username': 'maria_silva', 'email': 'maria.silva@example.com', 'password': 'Maria@2026Test'}</msg>
+<msg time="2026-10-23T11:29:45.279478" level="INFO">${body} = {'username': 'maria_silva', 'email': 'maria.silva@example.com', 'password': 'Maria@2026Test'}</msg>
 <var>${body}</var>
 <arg>json.loads(open('../../fixtures/json/users1.json').read())</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2026-10-23T11:06:00.512276" elapsed="0.005543"/>
+<status status="PASS" start="2026-10-23T11:29:45.274305" elapsed="0.005283"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${body}[username]</arg>
 <arg>${username}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-10-23T11:06:00.522499" elapsed="0.002598"/>
+<status status="PASS" start="2026-10-23T11:29:45.280194" elapsed="0.001050"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${body}[email]</arg>
 <arg>${email}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-10-23T11:06:00.529448" elapsed="0.001161"/>
+<status status="PASS" start="2026-10-23T11:29:45.281812" elapsed="0.000775"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${body}[password]</arg>
 <arg>${password}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-10-23T11:06:00.532832" elapsed="0.001166"/>
+<status status="PASS" start="2026-10-23T11:29:45.283313" elapsed="0.000689"/>
 </kw>
 <kw name="POST" owner="RequestsLibrary">
-<msg time="2026-10-23T11:06:01.981563" level="INFO">POST Request : url=https://fakestoreapi.com/users 
+<msg time="2026-10-23T11:29:46.853577" level="INFO">POST Request : url=https://fakestoreapi.com/users 
  path_url=/users 
  headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '93'} 
  body=b'{"username": "maria_silva", "email": "maria.silva@example.com", "password": "Maria@2026Test"}' 
  </msg>
-<msg time="2026-10-23T11:06:01.981802" level="INFO">POST Response : url=https://fakestoreapi.com/users 
+<msg time="2026-10-23T11:29:46.853918" level="INFO">POST Response : url=https://fakestoreapi.com/users 
  status=201, reason=Created 
- headers={'Date': 'Fri, 23 Oct 2026 10:05:49 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '8', 'Connection': 'keep-alive', 'access-control-allow-origin': '*', 'etag': 'W/"8-h5EdGu1QmHe4OkjsU292jNzSLfE"', 'x-powered-by': 'Express', 'cf-cache-status': 'DYNAMIC', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=MsWAEsrFdtEoBYk99iggyFLkXOBL74V0vdPr4JrNUUTlGFmYPR1qpyx0QVe%2B74KtMK%2FvW1a%2FAj%2Bbyp1fI90oAafOW3%2F4AJ9hVOugcygVmshteqcIEzVPiX6uqaZcR6kOt8Ap30o1uhdhAJryjeS6"}]}', 'Server': 'cloudflare', 'CF-RAY': 'a4efecef1cc86d3e-LIS'} 
- body={"id":1} 
+ headers={'Date': 'Fri, 23 Oct 2026 10:29:34 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '9', 'Connection': 'keep-alive', 'access-control-allow-origin': '*', 'etag': 'W/"9-hVv0cNJophUD7CGn+ZqXp8tVGo0"', 'x-powered-by': 'Express', 'cf-cache-status': 'DYNAMIC', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=07N%2FdugPStj%2FmHgnb14E38UMKMAYFJTbQTEPxTqTlJO33x3fdzwmqdxedstdWyMNCsK3NDr77A57gaMmi45wH%2FLejpXDgtNV5GPe3C1iyAbPV7712uvfO1yuFpwHpb3sJi7h9PwoKGOUfK4%2FM%2Fc8"}]}', 'Server': 'cloudflare', 'CF-RAY': 'a4f00fb88d7ae711-MAD'} 
+ body={"id":11} 
  </msg>
-<msg time="2026-10-23T11:06:01.982037" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<msg time="2026-10-23T11:29:46.854196" level="INFO">${response} = &lt;Response [201]&gt;</msg>
 <var>${response}</var>
 <arg>url=${url}/users</arg>
 <arg>json=${body}</arg>
 <arg>headers=${headers}</arg>
 <doc>Sends a POST request.</doc>
-<status status="PASS" start="2026-10-23T11:06:00.535384" elapsed="1.446721"/>
+<status status="PASS" start="2026-10-23T11:29:45.285619" elapsed="1.568633"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-10-23T11:06:01.984753" level="INFO">${response_body} = {'id': 1}</msg>
+<msg time="2026-10-23T11:29:46.856233" level="INFO">${response_body} = {'id': 11}</msg>
 <var>${response_body}</var>
 <arg>${response.json()}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-10-23T11:06:01.982674" elapsed="0.002161"/>
+<status status="PASS" start="2026-10-23T11:29:46.854823" elapsed="0.001468"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Status: ${response.status_code}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-10-23T11:06:01.985283" elapsed="0.001410"/>
+<status status="PASS" start="2026-10-23T11:29:46.856756" elapsed="0.001554"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Body: ${response.text}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-10-23T11:06:01.987211" elapsed="0.002385"/>
+<status status="PASS" start="2026-10-23T11:29:46.858745" elapsed="0.002301"/>
 </kw>
 <kw name="Status Should Be" owner="RequestsLibrary">
 <arg>201</arg>
 <arg>${response}</arg>
 <doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" start="2026-10-23T11:06:01.990921" elapsed="0.000769"/>
+<status status="PASS" start="2026-10-23T11:29:46.861996" elapsed="0.000712"/>
 </kw>
 <kw name="Dictionary Should Contain Key" owner="Collections">
 <arg>${response_body}</arg>
 <arg>id</arg>
 <doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2026-10-23T11:06:01.992225" elapsed="0.000549"/>
+<status status="PASS" start="2026-10-23T11:29:46.863309" elapsed="0.000589"/>
 </kw>
 <kw name="Should Be True" owner="BuiltIn">
 <arg>${response_body}[id] &gt; 0</arg>
 <doc>Fails if the given condition is not true.</doc>
-<status status="PASS" start="2026-10-23T11:06:01.993361" elapsed="0.001216"/>
+<status status="PASS" start="2026-10-23T11:29:46.864608" elapsed="0.000944"/>
 </kw>
-<status status="PASS" start="2026-10-23T11:06:00.500914" elapsed="1.494226"/>
+<status status="PASS" start="2026-10-23T11:29:45.268213" elapsed="1.597865"/>
 </test>
 <test id="s1-t2" name="Get Sigle User" line="30">
 <kw name="GET" owner="RequestsLibrary">
-<msg time="2026-10-23T11:06:02.877875" level="INFO">GET Request : url=https://fakestoreapi.com/users/1 
+<msg time="2026-10-23T11:29:47.937933" level="INFO">GET Request : url=https://fakestoreapi.com/users/1 
  path_url=/users/1 
  headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2026-10-23T11:06:02.878033" level="INFO">GET Response : url=https://fakestoreapi.com/users/1 
+<msg time="2026-10-23T11:29:47.938089" level="INFO">GET Response : url=https://fakestoreapi.com/users/1 
  status=200, reason=OK 
- headers={'Date': 'Fri, 23 Oct 2026 10:05:50 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'access-control-allow-origin': '*', 'etag': 'W/"120-HNMhv14aQeBJetA9fBvavCZ+gdk"', 'x-powered-by': 'Express', 'cf-cache-status': 'DYNAMIC', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=B2IGPNbnTsndIdT3jqUEGPGbixv2ZvO25cpfD%2BfH9bbXnpYZYO4CTUKRL9nohzsriEgkC0zSYGN%2Fofvt2tig6%2FZmanwj1xrf1MAvP19ELmUcLj%2FToYFktzj%2FiNm%2FaKEoRNT8iXktq3zF4R%2F9dk1s"}]}', 'Content-Encoding': 'zstd', 'Server': 'cloudflare', 'CF-RAY': 'a4efecf5ae6bfdef-LIS'} 
+ headers={'Date': 'Fri, 23 Oct 2026 10:29:35 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'access-control-allow-origin': '*', 'etag': 'W/"120-HNMhv14aQeBJetA9fBvavCZ+gdk"', 'x-powered-by': 'Express', 'cf-cache-status': 'DYNAMIC', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=DOd%2BYZJ%2Fom5sjqpvsd5Ue948IqTzcXmiNGJA6FzN%2FM0ZxEIclP2knEMgDM3cgDgo19SkOJ3ZcdYhTlcImoIvapu3K5SGgDNs%2FtdsectEwbwxtqe2oCh6aMxx%2B6Tm5eaz7A2oFHyCpFsCLCPHCMWV"}]}', 'Content-Encoding': 'zstd', 'Server': 'cloudflare', 'CF-RAY': 'a4f00fbf39f50148-MAD'} 
  body={"address":{"geolocation":{"lat":"-37.3159","long":"81.1496"},"city":"kilcoole","street":"new road","number":7682,"zipcode":"12926-3874"},"id":1,"email":"john@gmail.com","username":"johnd","password":"m38rmF$","name":{"firstname":"john","lastname":"doe"},"phone":"1-570-236-7033","__v":0} 
  </msg>
-<msg time="2026-10-23T11:06:02.878243" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2026-10-23T11:29:47.938296" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
 <arg>url=${url}/users/${user_id}</arg>
 <doc>Sends a GET request.</doc>
-<status status="PASS" start="2026-10-23T11:06:01.997561" elapsed="0.880731"/>
+<status status="PASS" start="2026-10-23T11:29:46.867993" elapsed="1.070352"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-10-23T11:06:02.880133" level="INFO">${response_body} = {'address': {'geolocation': {'lat': '-37.3159', 'long': '81.1496'}, 'city': 'kilcoole', 'street': 'new road', 'number': 7682, 'zipcode': '12926-3874'}, 'id': 1, 'email': 'john@gmail.com', 'username': ...</msg>
+<msg time="2026-10-23T11:29:47.940433" level="INFO">${response_body} = {'address': {'geolocation': {'lat': '-37.3159', 'long': '81.1496'}, 'city': 'kilcoole', 'street': 'new road', 'number': 7682, 'zipcode': '12926-3874'}, 'id': 1, 'email': 'john@gmail.com', 'username': ...</msg>
 <var>${response_body}</var>
 <arg>${response.json()}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-10-23T11:06:02.878861" elapsed="0.001331"/>
+<status status="PASS" start="2026-10-23T11:29:47.938941" elapsed="0.001559"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Status: ${response.status_code}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-10-23T11:06:02.880706" elapsed="0.001458"/>
+<status status="PASS" start="2026-10-23T11:29:47.941032" elapsed="0.001455"/>
 </kw>
 <kw name="Status Should Be" owner="RequestsLibrary">
 <arg>200</arg>
 <arg>${response}</arg>
 <doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" start="2026-10-23T11:06:02.882671" elapsed="0.000349"/>
+<status status="PASS" start="2026-10-23T11:29:47.942962" elapsed="0.000351"/>
 </kw>
 <kw name="Should Be Equal As Integers" owner="BuiltIn">
 <arg>${response_body}[id]</arg>
 <arg>${user_id}</arg>
 <doc>Fails if objects are unequal after converting them to integers.</doc>
-<status status="PASS" start="2026-10-23T11:06:02.883473" elapsed="0.000631"/>
+<status status="PASS" start="2026-10-23T11:29:47.943738" elapsed="0.001083"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${response_body}[username]</arg>
 <arg>${get_username}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-10-23T11:06:02.884661" elapsed="0.001074"/>
+<status status="PASS" start="2026-10-23T11:29:47.945468" elapsed="0.001036"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${response_body}[email]</arg>
 <arg>${get_email}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-10-23T11:06:02.886341" elapsed="0.001250"/>
+<status status="PASS" start="2026-10-23T11:29:47.947143" elapsed="0.000690"/>
 </kw>
-<status status="PASS" start="2026-10-23T11:06:01.996463" elapsed="0.891896"/>
+<status status="PASS" start="2026-10-23T11:29:46.867124" elapsed="1.081442"/>
 </test>
 <test id="s1-t3" name="Update User" line="44">
 <kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2026-10-23T11:06:02.891992" level="INFO">${headers} = {'Content-Type': 'application/json'}</msg>
-<var>${headers}</var>
-<arg>Content-Type=${content_type}</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2026-10-23T11:06:02.890804" elapsed="0.001296"/>
-</kw>
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2026-10-23T11:06:02.894412" level="INFO">${body} = {'id': 1, 'username': 'johnd_updated', 'email': 'john.updated@example.com', 'password': 'TestUpdate@2026'}</msg>
+<msg time="2026-10-23T11:29:47.953048" level="INFO">${body} = {'id': 1, 'username': 'johnd_updated', 'email': 'john.updated@example.com', 'password': 'TestUpdate@2026'}</msg>
 <var>${body}</var>
 <arg>id=${update_user_id}</arg>
 <arg>username=${update_username}</arg>
 <arg>email=${update_email}</arg>
 <arg>password=${update_password}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2026-10-23T11:06:02.892715" elapsed="0.001775"/>
+<status status="PASS" start="2026-10-23T11:29:47.951133" elapsed="0.002031"/>
 </kw>
 <kw name="PUT" owner="RequestsLibrary">
-<msg time="2026-10-23T11:06:03.699516" level="INFO">PUT Request : url=https://fakestoreapi.com/users/1 
+<msg time="2026-10-23T11:29:49.009352" level="INFO">PUT Request : url=https://fakestoreapi.com/users/1 
  path_url=/users/1 
  headers={'User-Agent': 'python-requests/2.34.2', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '106', 'Content-Type': 'application/json'} 
  body=b'{"id": 1, "username": "johnd_updated", "email": "john.updated@example.com", "password": "TestUpdate@2026"}' 
  </msg>
-<msg time="2026-10-23T11:06:03.700050" level="INFO">PUT Response : url=https://fakestoreapi.com/users/1 
+<msg time="2026-10-23T11:29:49.009816" level="INFO">PUT Response : url=https://fakestoreapi.com/users/1 
  status=200, reason=OK 
- headers={'Date': 'Fri, 23 Oct 2026 10:05:51 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'access-control-allow-origin': '*', 'etag': 'W/"63-sZn3rBpPCOIpeSIfnwdXwwK28I0"', 'x-powered-by': 'Express', 'cf-cache-status': 'DYNAMIC', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=9YH5rU%2BN5EUx23XNGFSqiCZw50bKlYb%2B%2F9NkGiPaCUOQu8%2FmPrs3wjW9Ri6r91iKguYs1onoM1b1qgU7fZYyOVhqNfg3PU5C6Xp98wQHG7NQpmNCjX1mlKIfv1pbd4eSiJYJK9ulnp8PKY1xEZ1o"}]}', 'Content-Encoding': 'zstd', 'Server': 'cloudflare', 'CF-RAY': 'a4efecfb6d69526e-LIS'} 
+ headers={'Date': 'Fri, 23 Oct 2026 10:29:36 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'access-control-allow-origin': '*', 'etag': 'W/"63-sZn3rBpPCOIpeSIfnwdXwwK28I0"', 'x-powered-by': 'Express', 'cf-cache-status': 'DYNAMIC', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=Pzwgv1qSjlsLL3m%2FmtsfXBFycvZGAMcUxwcTAsvUfBX1aDdGkX50wU6FY4y5MzJ2JypmO%2By7%2Bg57kKdjFD3d5kUuwODGSlVxaC8oDfY9Zi84xk77%2Bz7E1fe39%2FPXJhJKFIBMBRBHdwp16%2BjJsOP2"}]}', 'Content-Encoding': 'zstd', 'Server': 'cloudflare', 'CF-RAY': 'a4f00fc6788a5cef-MAD'} 
  body={"id":1,"username":"johnd_updated","email":"john.updated@example.com","password":"TestUpdate@2026"} 
  </msg>
-<msg time="2026-10-23T11:06:03.700507" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2026-10-23T11:29:49.010535" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
 <arg>url=${url}/users/${update_user_id}</arg>
 <arg>json=${body}</arg>
 <doc>Sends a PUT request.</doc>
-<status status="PASS" start="2026-10-23T11:06:02.895061" elapsed="0.805566"/>
+<status status="PASS" start="2026-10-23T11:29:47.953799" elapsed="1.056913"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-10-23T11:06:03.706021" level="INFO">${response_body} = {'id': 1, 'username': 'johnd_updated', 'email': 'john.updated@example.com', 'password': 'TestUpdate@2026'}</msg>
+<msg time="2026-10-23T11:29:49.016913" level="INFO">${response_body} = {'id': 1, 'username': 'johnd_updated', 'email': 'john.updated@example.com', 'password': 'TestUpdate@2026'}</msg>
 <var>${response_body}</var>
 <arg>${response.json()}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-10-23T11:06:03.701786" elapsed="0.004458"/>
+<status status="PASS" start="2026-10-23T11:29:49.012508" elapsed="0.004587"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>Status: ${response.status_code}</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-10-23T11:06:03.707736" elapsed="0.004225"/>
+<status status="PASS" start="2026-10-23T11:29:49.018828" elapsed="0.008412"/>
 </kw>
 <kw name="Log To Console" owner="BuiltIn">
 <arg>User updated successfully</arg>
 <doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-10-23T11:06:03.712912" elapsed="0.001458"/>
+<status status="PASS" start="2026-10-23T11:29:49.028899" elapsed="0.002137"/>
 </kw>
 <kw name="Status Should Be" owner="RequestsLibrary">
 <arg>200</arg>
 <arg>${response}</arg>
 <doc>Fails if response status code is different than the expected.</doc>
-<status status="PASS" start="2026-10-23T11:06:03.715370" elapsed="0.000622"/>
+<status status="PASS" start="2026-10-23T11:29:49.032556" elapsed="0.001733"/>
 </kw>
 <kw name="Dictionary Should Contain Key" owner="Collections">
 <arg>${response_body}</arg>
 <arg>id</arg>
 <doc>Fails if ``key`` is not found from ``dictionary``.</doc>
-<status status="PASS" start="2026-10-23T11:06:03.716648" elapsed="0.000627"/>
+<status status="PASS" start="2026-10-23T11:29:49.037716" elapsed="0.002314"/>
 </kw>
 <kw name="Should Be Equal As Integers" owner="BuiltIn">
 <arg>${response_body}[id]</arg>
 <arg>${update_user_id}</arg>
 <doc>Fails if objects are unequal after converting them to integers.</doc>
-<status status="PASS" start="2026-10-23T11:06:03.717843" elapsed="0.001253"/>
+<status status="PASS" start="2026-10-23T11:29:49.041274" elapsed="0.002724"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${response_body}[username]</arg>
 <arg>${update_username}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-10-23T11:06:03.720670" elapsed="0.001161"/>
+<status status="PASS" start="2026-10-23T11:29:49.044943" elapsed="0.001682"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${response_body}[email]</arg>
 <arg>${update_email}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2026-10-23T11:06:03.722797" elapsed="0.001894"/>
+<status status="PASS" start="2026-10-23T11:29:49.047896" elapsed="0.001371"/>
 </kw>
-<status status="PASS" start="2026-10-23T11:06:02.889880" elapsed="0.835531"/>
+<status status="PASS" start="2026-10-23T11:29:47.949708" elapsed="1.100359"/>
 </test>
-<status status="PASS" start="2026-10-23T11:05:59.326960" elapsed="4.405171"/>
+<status status="PASS" start="2026-10-23T11:29:44.620804" elapsed="4.432003"/>
 </suite>
 <statistics>
 <total>
