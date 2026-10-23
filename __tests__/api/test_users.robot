@@ -41,8 +41,25 @@ Get Sigle User
     Should Be Equal    ${response_body}[username]           ${get_username}
     Should Be Equal    ${response_body}[email]         ${get_email}
     
+Update User
+    ${headers}    Create Dictionary    Content-Type=${content_type}
+    ${body}    Create Dictionary    id=${update_user_id}    username=${update_username}    email=${update_email}    password=${update_password}
 
+    ${response}    PUT    url=${url}/users/${update_user_id}    json=${body}    
     
-    
+    ${response_body}    Set Variable    ${response.json()}
+    Log To Console    Status: ${response.status_code}
+    Log To Console    User updated successfully
+
+    # 1. Validar o status HTTP
+    Status Should Be    200    ${response}
+
+    # 2. Validar a existência do ID
+    Dictionary Should Contain Key    ${response_body}    id
+
+    # 3. Validar os dados de negócio
+    Should Be Equal As Integers    ${response_body}[id]    ${update_user_id}
+    Should Be Equal    ${response_body}[username]           ${update_username}
+    Should Be Equal    ${response_body}[email]         ${update_email}
     
     
